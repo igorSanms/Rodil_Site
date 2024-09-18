@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!---icon--->
+    <script src="https://kit.fontawesome.com/044f20069b.js" crossorigin="anonymous"></script>
+    <!---icon--->
+    <link rel="stylesheet" href="./assets/css/reset.css" type="text/css">
+    <link rel="stylesheet" href="./assets/css/style.css" type="text/css">
+    <title>Rodil</title>
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <header id="header">
+        <a id="logo" href="index.html">Rodil</a>
+        <nav id="nav">
+            <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu"
+                aria-expanded="false">Menu
+                <span id="menusus"></span>
+            </button>
+            <ul id="menu" role="menu">
+                <li><a href="https://www.twitch.tv/rodil" target="_blank">
+                        <i class="fa-brands fa-twitch"></i>
+                        Status Stream</a></li>
+                <li><a href="https://www.youtube.com/channel/UCDT1i4tivenp3FjnGdqWvQg" target="_blank">
+                        <i class="fa-brands fa-youtube"></i>
+                        Canal no YouTube</a></li>
+                <li><a href="https://antonyz.tk/" target="_blank">AntonyZ's Space</a></li>
+                <li><a href="https://caules.blogspot.com/" target="_blank">CAULES + SPAMS</a></li>
+                <li><a href="gif.html">GIFs</a></li>
+                <li><a href="img.html">Imagens</a>
+                <li><a href="clipe.html">Clipes</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="videos" class="slider">
+            <div class="slides">
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+                <input type="radio" name="radio-btn" id="radio4">
+
+                <div class="slide first">
+                    <a href="https://youtu.be/zJqaAmM1Kxc?si=BiC6TmULW292pOzi" target="_blank">
+                        <img src="./img/thumb.jpg" alt="vídeo novo"></a>
+                </div>
+
+                <div class="slide">
+                    <a href="https://youtu.be/NIZnvvHzeog?si=yV2rwjj2zzlZ2CPd" target="_blank">
+                        <img src="./img/thumb2.jpg" alt="vídeo novo"></a>
+                </div>
+
+                <div class="slide">
+                    <a href="https://youtu.be/U2RuREzovdk?si=uLC55sAfK6XDcR5R" target="_blank">
+                        <img src="./img/thumb3.jpg" alt="vídeo novo"></a>
+                </div>
+
+                <div class="slide">
+                    <a href="https://youtu.be/U2RuREzovdk?si=uLC55sAfK6XDcR5R">
+                        <img src="./img/random.jpg" alt="Meme"></a>
+                </div>
+
+                <div class="navigation-auto">
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                    <div class="auto-btn3"></div>
+                    <div class="auto-btn4"></div>
+                </div>
+
+
+            </div>
+
+            <div class="manual-navigation">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+                <label for="radio4" class="manual-btn"></label>
+            </div>
+        </section>
+
+        <section id="separacao">
+            <div id="marcacao">
+                <h1>Boyceta</h1>
+            </div>
+        </section>
+
+        <section class="card-container">
+            <!-- Contêiner que envolve o botão e o pop-up -->
+            <div class="popup-wrapper">
+                <!-- Botão para abrir o pop-up -->
+                <button id="popup-button" class="popup-toggle-button" onclick="togglePopup()">⚙️</button>
+
+                <!-- Pop-up para tocar todos os áudios -->
+                <div id="audio-popup" class="audio-popup">
+                    <p>Tocar todos os áudios <br> <strong>ABAIXE O VOLUME</strong></p>
+                    <button class="play-all-button" onclick="playAllAudios()">Tocar Todos</button>
+                    <button class="close-popup" onclick="togglePopup()">Fechar</button>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <div class="image-container">
+                    <img src="./img/Shaco.png" alt="Áudio 1" class="card-image">
+                    <i class="fa-solid fa-play play-icon"></i>
+                </div>
+                <p class="description">Você é a piada aqui!</p>
+                <button class="download-button" onclick="downloadAudio('./audios/Shaco_-_Voce_e_a_piada_aqui.mp3')">
+                    <i class="fa-solid fa-download"></i> Baixar
+                </button>
+                <audio src="./audios/Shaco_-_Voce_e_a_piada_aqui.mp3"></audio>
+            </div>
+
+            <div class="card">
+                <div class="image-container">
+                    <img src="./img/CARARODIL.jpg" alt="Áudio 1" class="card-image">
+                    <i class="fa-solid fa-play play-icon"></i>
+                </div>
+                <p class="description">Grito</p>
+                <button class="download-button" onclick="downloadAudio('./audios/gritoRodil.mp3')">
+                    <i class="fa-solid fa-download"></i> Baixar
+                </button>
+                <audio src="./audios/gritoRodil.mp3"></audio>
+            </div>
+
+            <div class="card">
+                <div class="image-container">
+                    <img src="./img/CARARODIL.jpg" alt="Áudio 1" class="card-image">
+                    <i class="fa-solid fa-play play-icon"></i>
+                </div>
+                <p class="description">Gringo morfético</p>
+                <button class="download-button" onclick="downloadAudio('./audios/GringoMorfetico.mp3')">
+                    <i class="fa-solid fa-download"></i> Baixar
+                </button>
+                <audio src="./audios/GringoMorfetico.mp3"></audio>
+            </div>
+            <!-- Adicione mais cards conforme necessário -->
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footerContainer">
+            <div class="socialIcons">
+                <a href="https://www.facebook.com/festinhadorodil/"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/rodsrodil/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.youtube.com/channel/UCDT1i4tivenp3FjnGdqWvQg"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://www.twitch.tv/rodil"><i class="fa-brands fa-twitch"></i></a>
+                <a href="https://tiktok.com/@rodsrodil"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+
+            <div class="footerNav">
+                <ul>
+                    <li><a href="mailto:oficialrodil@gmail.com">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
