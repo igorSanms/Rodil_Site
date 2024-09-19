@@ -2,6 +2,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: system-ui,
+        -apple-system, 'Helvetica Neue', Arial,
+        sans-serif;
 }
 
 body {
@@ -11,9 +14,6 @@ body {
 a {
     color: #ffffff;
     text-decoration: none;
-    font-family: system-ui,
-        -apple-system, 'Helvetica Neue', Arial,
-        sans-serif;
     transition: 0.5s;
 }
 
@@ -59,7 +59,86 @@ a:hover {
     display: none;
 }
 
+/* Estilos da galeria de fotos */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Espaço entre as imagens */
+    justify-content: center;
+    padding: 20px;
+    margin-bottom: 100px;
+}
 
+.gallery-item {
+    flex: 1 1 calc(25% - 20px); /* Largura de 1/4 da linha */
+    max-width: 250px; /* Limita o tamanho máximo das imagens */
+    box-sizing: border-box;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 200px; /* Define uma altura padrão */
+    display: block;
+    object-fit: cover; /* Ajusta a imagem para cobrir o espaço */
+    border-radius: 10px;
+    transition: transform 0.3s ease, z-index 0s;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05); /* Zoom ao passar o mouse */
+    z-index: 1; /* Garante que o zoom não sobreponha outras imagens */
+    transition: transform 0.3s ease, z-index 0.3s;
+}
+
+/* Estilo do lightbox */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox-content {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    color: white;
+    font-size: 50px;
+    padding: 10px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    color: #f1f1f1;
+}
 
 footer{
     background-color: #23232e;

@@ -80,3 +80,13 @@ function playAllAudios() {
         audio.play();
     });
 }
+
+// Função para forçar o download do áudio
+function downloadAudio(audioFile) {
+    const link = document.createElement('a');
+    link.href = audioFile;
+    link.download = audioFile.split('/').pop(); // O nome do arquivo para download será extraído do caminho
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link); // Remove o link após o clique
+}

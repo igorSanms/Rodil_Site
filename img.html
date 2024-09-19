@@ -32,10 +32,30 @@
                 </ul>
             </nav>
     </header>
-
+    
     <main>
+        <section class="gallery">
+            <div class="gallery-item">
+                <img src="./img/Fotos/a tal da cura lesbica.png" alt="Foto 1" onclick="openLightbox(0)">
+            </div>
+            <div class="gallery-item">
+                <img src="./img/Fotos/teste1.jpg" alt="Foto 2" onclick="openLightbox(1)">
+            </div>
+            <div class="gallery-item">
+                <img src="./img/Fotos/OIP.jpg" alt="Foto 3" onclick="openLightbox(2)">
+            </div>
+            <div class="gallery-item">
+                <img src="./img/Fotos/OIP (1).jpg" alt="Foto 4" onclick="openLightbox(3)">
+            </div>
+        </section>
         
-
+        <!-- Lightbox modal -->
+        <div id="lightbox" class="lightbox">
+            <span class="close" onclick="closeLightbox()">&times;</span>
+            <img id="lightbox-img" class="lightbox-content">
+            <a class="prev" href="#" onclick="changeImage(-1, event)">&#10094;</a>
+            <a class="next" href="#" onclick="changeImage(1, event)">&#10095;</a>
+        </div>
     </main>
     
     <footer>
@@ -55,7 +75,7 @@
             </div>
         </div>
     </footer>
-    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/img.js"></script>
 </body>
 
 </html>
